@@ -1,19 +1,1 @@
 <h2>Test Done </h2>
-<%= form_for :users, url: {action: "user_session_path"}, html: {class: 'form-horizontal'} do |f| %>
-	<%= check_box_tag(:test_done) %>
-	<%= label_tag(:test_done, "Test done") %>
-  <%= f.submit "Done" %>
-<% end %>
-
-
-<!-- 
-
-<%= simple_form_for :user do |f| %>
-
-  <%= f.error_notification %>
-  <%= f.input :test_done, as: :boolean %>
-
-  <div class="form-actions">
-    <%= f.submit "Done", class: "btn btn-primary" %>
-  </div>
-<% end %>-->
