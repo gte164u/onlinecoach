@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+			<div class="container">
+					<h1>Go to your next assignment!</h1>
+				</div>		
+	<% else %>
+		<div class="hero-unit">
+			<div class="container">
+
+				<h1>Welcome to Online Coach!</h1>
+				<p>
+					You have found the home page for 
+					<%= link_to "Online Coach", "http://www.adriennejohnston.me" %>
+					application.
+				</p>
+				<p>
+				<%= link_to "Sign Up Now!",new_user_registration_path,class: "btn btn-primary btn-large" %>
+				</p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>		
+		</div>
+		<% end %>
