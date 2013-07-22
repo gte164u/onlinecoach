@@ -1,9 +1,13 @@
 Onlinecoach::Application.routes.draw do
+  resources :pins
+
+
   devise_for :users
   devise_for :installs
 
  get 'about' => 'pages#about'
  get 'services' => 'pages#services'
+ get 'pins' => 'pins#index'
  root :to => 'pages#home'
 
   # The priority is based upon order of creation:
