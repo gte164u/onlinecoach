@@ -1,8 +1,13 @@
 Onlinecoach::Application.routes.draw do
+  get "users/show"
+
+  get "user/show"
+
   resources :pins
 
-
   devise_for :users
+  match 'users/:id' => 'users#show'
+
   devise_for :installs
 
  get 'about' => 'pages#about'
