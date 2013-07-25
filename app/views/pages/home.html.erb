@@ -1,7 +1,11 @@
 <% if user_signed_in? %>
 			<div class="container">
+				<% if current_user.test_done == nil %>
+					<h1>Take assessment!</h1>
+					<% else %>
 					<h1>Go to your next assignment!</h1>
-				</div>		
+				<% end %>
+				</div>	
 	<% else %>
 		<div class="hero-unit">
 			<div class="container">
@@ -14,6 +18,7 @@
 				</p>
 				<p>
 				<%= link_to "Sign Up Now!",new_user_registration_path,class: "btn btn-primary btn-large" %>
+
 				</p>
 			<p></p>
 			<p></p>
