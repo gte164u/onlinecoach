@@ -1,0 +1,215 @@
+<title> Assessment 1 </title>
+
+<div class="container">
+<div class="progress">
+  <div class="bar" style="width: 50%"></div>
+</div>
+</div>
+
+<%= simple_form_for :assessment, html: { class: 'form-vertical' } do |f| %>
+
+  	<%= f.error_notification %>
+  <ol><li>  	<%= f.input :coaching_objective, label: "Why have you subscribed to this coaching service?", collection: ["Ongoing professional growth", "Preparing for a promotion/raise", "Preparing to make a job change with same employer", "Preparing to make a job change with new employer"] %></li>
+	<li> <%= f.input :objective_timeframe, label: "What is your ideal timeframe for achieving your objective?", collection: ["6 months", "1 year", "1.5 years", "2 years or longer"] %></li>
+	<li> <%= f.input :year_of_birth, label: "What year were you born?", collection: 1930..2000%></li>
+	<li>  <%= f.input :sex, label: "Are you male or female?", as: :radio_buttons, collection: ["Female", "Male"] %></li>
+	<li>  <%= f.input :kids, label: "Do you have children or other dependents who may require a significant portion of your time and attention?", as: :radio_buttons, collection: ["Yes", "No"] %></li>
+	<li>  <%= f.input :employ_status, label: "What is your current employment status?", collection: ["Full Time - Exempt", "Full Time - Non-exempt", "Part Time", "Not currently employed"] %></li>
+	<li>  <%= f.input :hours_per_week, label: "How many hours per week do you typically work?", collection: ["<10", "10-20","20-40","40-50",">50"] %>
+	<li>  <%= f.input :work_experience, label: "How many years of work experience do you have?", collection: 0..50 %></li>
+	<li>  <%= f.input :num_employers, label: "How many employers have you had?", collection: 0..10 %></li>
+	<li>  <%= f.input :num_roles, label: "How many different roles have you had in your career?", collection: 0..15 %></li>
+	<li>  <%= f.input :current_title, label: "What is your current title level?", collection: ["Individual contributor", "Frontline manager", "Middle manager", "Director", "Vice President","C-suite", "Business owner"] %></li>
+	<li>  <%= f.input :current_industry, label: "What is your current industry?", collection: ["Agriculture ",
+							"Accounting ",
+							"Advertising ",
+							"Aerospace ",
+							"Aircraft ",
+							"Airline ",
+							"Apparel & Accessories ",
+							"Automotive ",
+							"Banking ",
+							"Broadcasting ",
+							"Brokerage ",
+							"Biotechnology ",
+							"Call Centers ",
+							"Cargo Handling ",
+							"Chemical ",
+							"Computer ",
+							"Consulting ",
+							"Consumer Products ",
+							"Cosmetics ",
+							"Defense ",
+							"Department Stores ",
+							"Education ",
+							"Electronics ",
+							"Energy ",
+							"Entertainment & Leisure ",
+							"Executive Search ",
+							"Financial Services ",
+							"Food, Beverage & Tobacco ",
+							"Grocery ",
+							"Health Care ",
+							"Internet Publishing ",
+							"Investment Banking ",
+							"Legal ",
+							"Manufacturing ",
+							"Motion Picture & Video ",
+							"Music ",
+							"Newspaper Publishers ",
+							"Online Auctions ",
+							"Pension Funds ",
+							"Pharmaceuticals ",
+							"Private Equity ",
+							"Publishing ",
+							"Real Estate ",
+							"Retail & Wholesale ",
+							"Securities & Commodity Exchanges ",
+							"Service ",
+							"Soap & Detergent ",
+							"Software ",
+							"Sports ",
+							"Technology ",
+							"Telecommunications ",
+							"Television ",
+							"Transportation ",
+							"Venture Capital "] %></li>
+  <li>  <%= f.input :current_dept, label: "In which department do you currently work?", collection: ["Accounting/Finance","Human Resources", "Marketing", "Operations","Professional Services","Sales", "Technology"] %></li>
+	<li>  <%= f.input :current_years, label: "How many years have you been in your current role?", collection: 0..30 %></li>
+	<li>  <%= f.input :current_salary, label: "What is your annual cash compensation in your current role?", hint: "This should be your base salary plus bonus, tips, commission or any other financial compensation you receive in pre-tax dollars.", collection: ["$0-$30,000", "$30,001-$50,000","$50,001-$75,000","$75,001-$100,000","$100,001-$125,000","$125,001-$150,000","$150,001+"] %></li>
+	<li>  <%= f.input :last_review, label: "What was your rating on your last performance review?", collection: ["Below expectations", "Meets expectations", "Exceeds expectations", "Excellent"] %></li>
+	<li>  <%= f.input :current_happy, label: "Are you satisfied with your current role?", as: :radio_buttons, collection: ["Yes", "No"] %></li>
+	<li>  <%= f.input :current_unhappy_reason, label: "If you are unhappy in your current role, please provide details about what you would like to change.", as: :text, input_html: { rows: "3"}  %></li>
+	<li>  <%= f.input :written_assess, label: "What do you hope to achieve by going through this coaching process?", as: :text, input_html: { rows: "3" }%></li>
+	<!-- <li>  <%= f.input :verbal_assess %></li>-->
+	<li>  <%= f.input :previous_title, label: "What was your title in your previous role?", collection: ["Individual contributor", "Frontline manager", "Middle manager", "Director", "Vice President","C-suite", "Business owner"] %></li>
+	<li>  <%= f.input :previous_industry, label: "In which industry was your previous role?", collection: ["Agriculture ",
+							"Accounting ",
+							"Advertising ",
+							"Aerospace ",
+							"Aircraft ",
+							"Airline ",
+							"Apparel & Accessories ",
+							"Automotive ",
+							"Banking ",
+							"Broadcasting ",
+							"Brokerage ",
+							"Biotechnology ",
+							"Call Centers ",
+							"Cargo Handling ",
+							"Chemical ",
+							"Computer ",
+							"Consulting ",
+							"Consumer Products ",
+							"Cosmetics ",
+							"Defense ",
+							"Department Stores ",
+							"Education ",
+							"Electronics ",
+							"Energy ",
+							"Entertainment & Leisure ",
+							"Executive Search ",
+							"Financial Services ",
+							"Food, Beverage & Tobacco ",
+							"Grocery ",
+							"Health Care ",
+							"Internet Publishing ",
+							"Investment Banking ",
+							"Legal ",
+							"Manufacturing ",
+							"Motion Picture & Video ",
+							"Music ",
+							"Newspaper Publishers ",
+							"Online Auctions ",
+							"Pension Funds ",
+							"Pharmaceuticals ",
+							"Private Equity ",
+							"Publishing ",
+							"Real Estate ",
+							"Retail & Wholesale ",
+							"Securities & Commodity Exchanges ",
+							"Service ",
+							"Soap & Detergent ",
+							"Software ",
+							"Sports ",
+							"Technology ",
+							"Telecommunications ",
+							"Television ",
+							"Transportation ",
+							"Venture Capital "] %></li>
+	<li>  <%= f.input :previous_dept, label: "In which department was your previous role?", collection: ["Accounting/Finance","Human Resources", "Marketing", "Operations","Professional Services","Sales", "Technology"]  %></li>
+	<li>  <%= f.input :previous_years, label: "How many years were you in your previous role?", collection: 0..30  %></li>
+	<li>  <%= f.input :previous_salary, label: "What was your annual cash compensation in your previous role?", hint: "This should be your base salary plus bonus, tips, commission or any other financial compensation you receive in pre-tax dollars.", collection: ["$0-$30,000", "$30,001-$50,000","$50,001-$75,000","$75,001-$100,000","$100,001-$125,000","$125,001-$150,000","$150,001+"] %></li>
+	<li>  <%= f.input :previous_reason_leave, label: "Why did you leave your previous role?", collection: ["Fired", "To take a job that better aligned with your long-term career objectives", "To take a job that paid more money", "To get away from your previous manager"] %></li>
+	<li>  <%= f.input :desired_title, label: "What is your desired job title by the timeframe you specified above?", collection: ["Individual contributor", "Frontline manager", "Middle manager", "Director", "Vice President","C-suite", "Business owner"]%></li>
+	<li>  <%= f.input :desired_industry, label: "In which industry do you wish to work in the timeframe you specified above?", collection: ["Agriculture ",
+							"Accounting ",
+							"Advertising ",
+							"Aerospace ",
+							"Aircraft ",
+							"Airline ",
+							"Apparel & Accessories ",
+							"Automotive ",
+							"Banking ",
+							"Broadcasting ",
+							"Brokerage ",
+							"Biotechnology ",
+							"Call Centers ",
+							"Cargo Handling ",
+							"Chemical ",
+							"Computer ",
+							"Consulting ",
+							"Consumer Products ",
+							"Cosmetics ",
+							"Defense ",
+							"Department Stores ",
+							"Education ",
+							"Electronics ",
+							"Energy ",
+							"Entertainment & Leisure ",
+							"Executive Search ",
+							"Financial Services ",
+							"Food, Beverage & Tobacco ",
+							"Grocery ",
+							"Health Care ",
+							"Internet Publishing ",
+							"Investment Banking ",
+							"Legal ",
+							"Manufacturing ",
+							"Motion Picture & Video ",
+							"Music ",
+							"Newspaper Publishers ",
+							"Online Auctions ",
+							"Pension Funds ",
+							"Pharmaceuticals ",
+							"Private Equity ",
+							"Publishing ",
+							"Real Estate ",
+							"Retail & Wholesale ",
+							"Securities & Commodity Exchanges ",
+							"Service ",
+							"Soap & Detergent ",
+							"Software ",
+							"Sports ",
+							"Technology ",
+							"Telecommunications ",
+							"Television ",
+							"Transportation ",
+							"Venture Capital "] %></li>
+	<li>  <%= f.input :desired_dept, label: "In which department do you want to be working in the timeframe specified above?", collection: ["Accounting/Finance","Human Resources", "Marketing", "Operations","Professional Services","Sales", "Technology"] %></li>
+	<li>  <%= f.input :purpose, label: "Do you have a sense of your purpose or the unique value you bring to the world?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :values, label: "Are you aware of your personal values?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :strengths, label: "Are you aware of your personal strengths?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :opp_to_develop, label: "Are you aware of your opportunities for development?" , as: :radio_buttons, collection:["Yes", "No"]%></li>
+	<li>  <%= f.input :fired, label: "Have you ever been fired from a job?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :fired_det, label: "If you have ever been fired from a job, please share why you were fired", as: :text, input_html: { rows: "3"}  %></li>
+	<li>  <%= f.input :drink_alcohol, label: "Do you consume excessive amounts of alcohol at work functions?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :swear, label: "Do you use profanity in professional settings?", as: :radio_buttons, collection:["Yes", "No"] %></li>
+	<li>  <%= f.input :conflict, label: "How do you typically handle conflict in a professional setting?", collection: ["Ignore conflict", "Try to find a compromise", "Argue your position until you win"] %></li>
+	<li>  <%= f.input :learning_style, label: "What is your learning style?", collection: ["Visual", "Auditory", "Kinesthetic"] %></li></ol>
+
+ <%= f.submit "Save", class: "btn btn-primary"  %>
+
+	<% end %>
+
+	<div>

@@ -8,4 +8,10 @@ class PagesController < ApplicationController
 
   def services
   end
+
+  def assessment2
+  end
+
+  def assessment3
+  end
 end

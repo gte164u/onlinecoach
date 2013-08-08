@@ -1,15 +1,28 @@
 Onlinecoach::Application.routes.draw do
+
   get "users/show"
 
   get "user/show"
 
-  resources :pins
-
+    devise_for :users do 
+    get 'users/sign_out' => 'devise/sessions#destroy' 
+  end
   devise_for :users
+
+  resources :pins
+  resources :users
+  resources :assessments
+
+
+  
   match 'users/:id' => 'users#show'
 
   devise_for :installs
 
+ get 'assessment' => 'assessments#show'
+ post 'assessment' => 'assessments#create'
+ get 'assessment2' => 'pages#assessment2'
+ get 'assessment3' => 'pages#assessment3'
  get 'about' => 'pages#about'
  get 'services' => 'pages#services'
  get 'pins' => 'pins#index'
